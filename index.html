@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="formulário usando quase todas as tags e atributos do HTMl,conheça os inputs e seus atributos.">
+    <meta name="robots" content="index,follow">
+    <meta name =" keywords " content =" html , inputs , formulário"> 
+    <title>Melhor formulário da internet!!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <label id="label-nome-completo" for="nome-completo">Nome completo</label>
+            <input type="text" name="nome completo" id="nome-completo" placeholder="escreva seu nome" required>
+            <label for="idade" id="label-idade">Idade</label>
+            <input type="number" name="idade" id="idade" placeholder="escreva sua idade" min="18" max="60" required>
+            <label for="email" id="label-email">Email</label>
+            <input type="email" name="email" id="email" required>
+            <fieldset >
+                <legend>escolha o sexo</legend>            
+            <input type="radio" name="sexo" id="masculino" value="masculino" required>
+            <label for="masculino">masculino</label> 
+            <input type="radio" name="sexo" id="feminino" value="feminino" required>
+            <label for="feminino">feminino</label>
+            
+            </fieldset>
+            <label for="comidas-favoritas" id="label-comidas-favoritas"></label>
+            <input type="text" name="comidas" id="comidas-favoritas" placeholder="escreva sua comida favorita" list="comidas-fav">
+            <fieldset>
+                <legend>conhecimentos em:</legend>
+                <label for="php">php</label>
+                <input type="checkbox" name="php" id="php">
+                <label for="javascript">javascript</label>
+                <input type="checkbox" name="javascript" id="javascript">
+                <label for="html-css">html e css</label>
+                <input type="checkbox" name="html-css" id="html-css">
+            </fieldset>
+            <textarea name="outros" id="outros" cols="20" rows="5" placeholder="escreva algo a mais sobre você" maxlength="100"></textarea>
+            <label for="estados" id="label-estados">Estado</label>
+            <select name="estados" id="estados" required>
+                <option value="--"></option>
+                <optgroup label="Região Nordeste">
+                    <option value ="RN"> Rio Grande do Norte </option>
+                    <option value ="BA"> Bahia </option >
+                </optgroup>
+            </select>
+            <input id="enviar" type="submit" value="enviar">
+            <datalist id="comidas-fav">
+                <option value="lasanha"></option>
+                <option value="chocolate"></option>
+                <option value="arroz"></option>
+                <option value="peixes"></option>
+            </datalist>
+
+
+        </form>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
